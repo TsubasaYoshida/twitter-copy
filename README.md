@@ -36,6 +36,7 @@
 
 ## Retrospective
 ### Keep
+- RubyMineのショートカットキーを積極的に使っていった。
 
 ### Problem
 
