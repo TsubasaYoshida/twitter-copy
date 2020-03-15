@@ -192,6 +192,9 @@ GEM
       sprockets-rails
       tilt
     sexp_processor (4.14.1)
+    simple_form (5.0.1)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.1.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -247,6 +250,7 @@ DEPENDENCIES
   rails (~> 6.0.2, >= 6.0.2.1)
   rspec-rails
   sass-rails (>= 6)
+  simple_form
   spring
   spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
