@@ -1,0 +1,14 @@
+.sign-up {
+  text-align: center;
+  padding: 16px 16px 32px;
+  margin: 16px auto;
+  background-color: #FFF;
+  border: 4px #666 solid;
+  width: 300px;
+  box-sizing: border-box;
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+}
