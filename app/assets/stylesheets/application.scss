@@ -29,6 +29,21 @@ a {
   color: #333;
 }
 
+input[aria-invalid="true"] {
+  border-color: #dc3545;
+}
+
+textarea[aria-invalid="true"] {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  text-align: left;
+}
+
 .logo {
   display: inline-block;
   background-color: #FFF;
@@ -51,8 +66,8 @@ a {
   height: 34px;
   font-size: 1.6rem;
   color: #555;
-  border-radius: 3px;
-  border: 1px solid #ccc;
+  //border-radius: 3px;
+  border: 3px solid #ccc;
   padding: 8px 8px;
   margin-top: 1rem;
   box-sizing: border-box;

@@ -7,6 +7,7 @@ ja:
     placeholders:
       user:
         screen_name: 'ユーザ名'
+        name: '表示名'
         email: 'メールアドレス'
         password: 'パスワード'
-        password_confirmation: 'パスワード再入力'
+        password_confirmation: 'パスワード(再入力)'
