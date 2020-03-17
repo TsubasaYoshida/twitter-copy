@@ -29,6 +29,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'html2haml'
   gem 'i18n_generators'
+  gem 'letter_opener'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
