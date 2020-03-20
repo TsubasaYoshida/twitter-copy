@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'home/index'
+  get 'sign_up_done', to: 'home#sign_up_done'
+  devise_for :users, controllers: {
+      registrations: 'users/registrations'
+  }
+  root to: 'home#index'
 end

@@ -1,0 +1,13 @@
+ja:
+  helpers:
+    submit:
+      user:
+        create: '登録する'
+  simple_form:
+    placeholders:
+      user:
+        screen_name: 'ユーザ名'
+        name: '表示名'
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード(再入力)'
