@@ -9,8 +9,13 @@ SimpleForm.setup do |config|
     b.use :full_error, wrap_with: {tag: :div, class: :'error-message'}
   end
 
+  config.wrappers :checkbox, class: 'form-group' do |b|
+    b.use :html5
+    b.use :label_input, class: :checkbox, error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :full_error, wrap_with: {tag: :div, class: :'error-message'}
+  end
+
   config.default_wrapper = :default
   config.browser_validations = false
   config.button_class = :button
-  config.boolean_label_class = :checkbox
 end
