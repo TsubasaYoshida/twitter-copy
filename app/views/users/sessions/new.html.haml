@@ -2,8 +2,8 @@
   .logo Cwitter
   %h1.sign-in__title ログイン
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    -# TODO メールアドレスでもログインできるように
-    = f.input :screen_name, autofocus: true
+    -# TODO ユーザ名でもログインできるように
+    = f.input :email, autofocus: true
     = f.input :password, autocomplete: 'current-password'
     = f.input :remember_me, as: :boolean, wrapper: :checkbox
     = f.button :submit, 'ログイン'

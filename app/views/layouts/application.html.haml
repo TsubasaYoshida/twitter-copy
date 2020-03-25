@@ -17,4 +17,5 @@
   %body
     .all-wrapper
       = notice if notice
+      = link_to 'ログアウト', destroy_user_session_path, method: :delete
       = yield
