@@ -1,6 +1,9 @@
 .sign-in
   .logo Cwitter
   %h1.sign-in__title ログイン
+  - if alert
+    .sign-in__error-message
+      = alert
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     -# TODO ユーザ名でもログインできるように
     = f.input :email, autofocus: true
