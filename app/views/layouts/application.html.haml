@@ -16,5 +16,12 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .all-wrapper
-      = notice if notice
-      = yield
+      - if minimum_layout?
+        = yield
+      - else
+        .sign-out
+          = link_to 'ログアウト', destroy_user_session_path, method: :delete
+        - if notice
+          .notice
+            = notice
+        = yield

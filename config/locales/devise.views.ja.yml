@@ -15,6 +15,9 @@ ja:
     confirmations:
       new:
         resend_confirmation_instructions: "アカウント確認メール再送"
+    failure:
+      invalid: "ログインに失敗しました。"
+      not_found_in_database: "ログインに失敗しました。"
     mailer:
       confirmation_instructions:
         action: "アカウント確認"

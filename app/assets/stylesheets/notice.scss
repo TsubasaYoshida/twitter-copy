@@ -1,0 +1,14 @@
+.notice {
+  color: #FFF;
+  background-color: #0fb9b1;
+  padding: 16px;
+  @media screen and (max-width: 1023px) {
+    margin: 16px 8px 0;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 250px;
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+  }
+}

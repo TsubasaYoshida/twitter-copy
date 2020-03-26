@@ -37,6 +37,11 @@ textarea[aria-invalid="true"] {
   border-color: #dc3545;
 }
 
+.checkbox {
+  vertical-align: bottom;
+  font-size: 1.6rem;
+}
+
 .error-message {
   color: #dc3545;
   margin-top: .5rem;
@@ -57,7 +62,7 @@ textarea[aria-invalid="true"] {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .input-text {
@@ -79,7 +84,7 @@ textarea[aria-invalid="true"] {
   border: 4px #666 solid;
   border-radius: 5px;
   padding: 10px 16px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-size: 1.8rem;
   cursor: pointer;
   &:hover {

@@ -1,8 +1,21 @@
 Rails.application.routes.draw do
   get 'home/index'
   get 'sign_up_done', to: 'home#sign_up_done'
-  devise_for :users, controllers: {
+
+  # ルーティングをカスタマイズする場合は、まず skip でルーティング生成をスキップする
+  devise_for :users, skip: [:sessions, :registrations], controllers: {
       registrations: 'users/registrations'
   }
+
+  # skip したルーティングをここでカスタマイズする
+  devise_scope :user do
+    get 'sign_in', to: 'devise/sessions#new', as: :new_user_session
+    post 'sign_in', to: 'devise/sessions#create', as: :user_session
+    delete 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
+
+    # コントローラをカスタマイズした場合は、以下もカスタマイズしたほうを見るようにする
+    get 'sign_up', to: 'users/registrations#new', as: :new_user_registration
+    post 'sign_up', to: 'users/registrations#create', as: :user_registration
+  end
   root to: 'home#index'
 end
