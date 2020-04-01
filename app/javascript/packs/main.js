@@ -25,6 +25,6 @@ let Tweets = {
 new Vue({
   el: '#app',
   components: {
-    'tweets': Tweets
+    'my-tweets': Tweets
   }
 });
