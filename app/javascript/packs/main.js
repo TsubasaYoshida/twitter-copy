@@ -1,5 +1,5 @@
 import Vue from 'vue/dist/vue.esm.js'
-import Tweets from './components/tweets'
+import Tweets from './components/tweets_post'
 
 new Vue({
   el: '#app',
