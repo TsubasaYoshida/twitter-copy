@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="col">
+    <form>
       <input placeholder="いまどうしてる？" type="text" v-model="tweet.body">
       <button v-on:click="createBook">ツイート</button>
     </form>
