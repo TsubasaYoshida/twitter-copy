@@ -2,7 +2,7 @@
   <div>
     <form>
       <input placeholder="いまどうしてる？" type="text" v-model="tweet.body">
-      <button v-on:click="createBook">ツイート</button>
+      <input type="button" v-on:click="createTweet" value="ツイート">
     </form>
   </div>
 </template>
@@ -23,13 +23,14 @@
       }
     },
     methods: {
-      createBook: function(){
+      createTweet: function(){
         if (!this.tweet.body) return
         axios
           .post('/tweets', {
             tweet: this.tweet
           })
           .then((response) => {
+            this.tweet.body = ''
           }, (error) => {
             console.log(error)
           })
