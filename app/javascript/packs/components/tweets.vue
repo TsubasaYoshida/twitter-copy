@@ -1,27 +1,22 @@
 <template>
-  <div>{{ tweet }}</div>
+  <div>{{this.$store.state.body}}</div>
 </template>
 
 <script>
   import axios from 'axios'
 
   export default {
-    data: function(){
-      return {
-        tweet: ''
-      }
-    },
     methods: {
-      get_tweet: function(){
+      set_tweet: function(){
         axios
-          .get('http://localhost:3000/tweets/1.json')
+          .get('http://localhost:3000/tweets/6.json')
           .then(response => {
-            this.tweet = response.data.body
+            this.$store.commit('set_body', response.data.body)
           })
       }
     },
     mounted: function(){
-      this.get_tweet()
+      this.set_tweet()
     }
   }
 </script>

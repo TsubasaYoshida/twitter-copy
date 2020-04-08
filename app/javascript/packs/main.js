@@ -1,11 +1,10 @@
 import Vue from 'vue/dist/vue.esm.js'
-import Vuex from 'vuex'
+import store from './store'
 import Tweets from './components/tweets'
 import TweetPost from './components/tweets_post'
 
-Vue.use(Vuex)
-
 new Vue({
+  store,
   el: '#app',
   components: {
     'my-tweets': Tweets,
