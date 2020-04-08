@@ -31,6 +31,7 @@
           })
           .then((response) => {
             this.tweet.body = ''
+            this.$store.dispatch('set_tweet_action')
           }, (error) => {
             console.log(error)
           })
