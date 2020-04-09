@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tweets
   get 'home/index'
   get 'sign_up_done', to: 'home#sign_up_done'
 
