@@ -26,12 +26,12 @@
       createTweet: function(){
         if (!this.tweet.body) return
         axios
-          .post('/tweets', {
+          .post('tweets', {
             tweet: this.tweet
           })
           .then((response) => {
             this.tweet.body = ''
-            this.$store.dispatch('set_tweet_action')
+            this.$store.dispatch('fetch_tweets')
           }, (error) => {
             console.log(error)
           })

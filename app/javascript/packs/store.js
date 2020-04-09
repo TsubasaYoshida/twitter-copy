@@ -7,19 +7,19 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   strict: true,
   state: {
-    body: ''
+    tweets: []
   },
   mutations: {
-    set_body(state, body){
-      state.body = body
+    set_tweets(state, tweets){
+      state.tweets = tweets
     }
   },
   actions: {
-    set_tweet_action(context){
+    fetch_tweets(context){
       axios
-        .get('http://localhost:3000/tweets/54.json')
+        .get('tweets.json')
         .then(response => {
-          context.commit('set_body', response.data.body)
+          context.commit('set_tweets', response.data)
         })
     }
   }

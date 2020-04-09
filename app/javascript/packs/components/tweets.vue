@@ -1,5 +1,9 @@
 <template>
-  <div>{{this.$store.state.body}}</div>
+  <div>
+    <div v-for="tweet in this.$store.state.tweets">
+      {{ tweet.body }}
+    </div>
+  </div>
 </template>
 
 <script>
@@ -7,16 +11,16 @@
 
   export default {
     methods: {
-      set_tweet: function(){
+      fetch_tweets_first: function(){
         axios
-          .get('http://localhost:3000/tweets/6.json')
+          .get('tweets.json')
           .then(response => {
-            this.$store.commit('set_body', response.data.body)
+            this.$store.commit('set_tweets', response.data)
           })
       }
     },
     mounted: function(){
-      this.set_tweet()
+      this.fetch_tweets_first()
     }
   }
 </script>
