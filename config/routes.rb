@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :tweets
+  resources :tweets, only: %i(index create destroy)
   get 'home/index'
   get 'sign_up_done', to: 'home#sign_up_done'
 
@@ -18,5 +18,5 @@ Rails.application.routes.draw do
     get 'sign_up', to: 'users/registrations#new', as: :new_user_registration
     post 'sign_up', to: 'users/registrations#create', as: :user_registration
   end
-  root to: 'home#index'
+  root to: 'tweets#index'
 end
