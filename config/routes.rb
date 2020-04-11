@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :tweets
+  resources :tweets, only: %i(index create destroy)
   get 'home/index'
   get 'sign_up_done', to: 'home#sign_up_done'
 
