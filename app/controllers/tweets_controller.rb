@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.new(tweet_params)
+    @tweet = current_user.tweets.build(tweet_params)
     if @tweet.save
       head :created
     else
@@ -22,10 +22,10 @@ class TweetsController < ApplicationController
   private
 
   def set_tweet
-    @tweet = Tweet.find(params[:id])
+    @tweet = current_user.tweets.find(params[:id])
   end
 
   def tweet_params
-    params.require(:tweet).permit(:user_id, :body)
+    params.require(:tweet).permit(:body)
   end
 end

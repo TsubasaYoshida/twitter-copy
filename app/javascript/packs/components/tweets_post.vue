@@ -17,8 +17,7 @@
     data: function(){
       return {
         tweet: {
-          body: '',
-          user_id: 1
+          body: ''
         }
       }
     },

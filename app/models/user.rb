@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :tweets
+
   devise :database_authenticatable,
          # deviseのバリデーションの仕組みがわからないので、自前で作る
          # :validatable,
