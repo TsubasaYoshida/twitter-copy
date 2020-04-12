@@ -23,16 +23,13 @@
     },
     methods: {
       createTweet: function(){
-        if (!this.tweet.body) return
         axios
           .post('tweets', {
             tweet: this.tweet
           })
-          .then((response) => {
+          .then(() => {
             this.tweet.body = ''
-            this.$store.dispatch('fetch_tweets')
-          }, (error) => {
-            console.log(error)
+            this.$store.dispatch('fetchTweets')
           })
       }
     }

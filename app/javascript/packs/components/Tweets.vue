@@ -12,30 +12,30 @@
 
   export default {
     methods: {
-      fetch_tweets_first: function(){
+      fetchTweetsFirstAccess: function(){
         axios
           .get('tweets.json')
           .then(response => {
-            this.$store.commit('set_tweets', response.data)
+            this.$store.commit('setTweets', response.data)
           })
       },
       fetchCurrentUser: function(){
         axios
           .get('current_user.json')
           .then(response => {
-            this.$store.commit('set_user_id', response.data.id)
+            this.$store.commit('setUserId', response.data.id)
           })
       },
       deleteTweet: function(id){
         axios
           .delete('tweets/' + id)
           .then(() => {
-            this.$store.dispatch('fetch_tweets')
+            this.$store.dispatch('fetchTweets')
           })
       },
     },
     mounted: function(){
-      this.fetch_tweets_first()
+      this.fetchTweetsFirstAccess()
       this.fetchCurrentUser()
     }
   }

@@ -11,19 +11,19 @@ export default new Vuex.Store({
     user_id: '',
   },
   mutations: {
-    set_tweets(state, tweets){
+    setTweets(state, tweets){
       state.tweets = tweets
     },
-    set_user_id(state, user_id){
+    setUserId(state, user_id){
       state.user_id = user_id
     },
   },
   actions: {
-    fetch_tweets(context){
+    fetchTweets(context){
       axios
         .get('tweets.json')
         .then(response => {
-          context.commit('set_tweets', response.data)
+          context.commit('setTweets', response.data)
         })
     }
   }
