@@ -18,5 +18,12 @@ Rails.application.routes.draw do
     get 'sign_up', to: 'users/registrations#new', as: :new_user_registration
     post 'sign_up', to: 'users/registrations#create', as: :user_registration
   end
+
+  namespace :api do
+    scope :v1 do
+      mount_devise_token_auth_for 'User', at: 'auth'
+    end
+  end
+
   root to: 'tweets#index'
 end
