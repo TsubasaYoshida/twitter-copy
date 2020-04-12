@@ -2,7 +2,7 @@
   <div>
     <form>
       <input placeholder="いまどうしてる？" type="text" v-model="tweet.body">
-      <input type="button" v-on:click="createTweet" value="ツイート">
+      <input type="button" v-bind:disabled="disabled" v-on:click="createTweet" value="ツイート">
     </form>
   </div>
 </template>
@@ -19,6 +19,11 @@
         tweet: {
           body: ''
         }
+      }
+    },
+    computed: {
+      disabled: function(){
+        return this.tweet.body.length === 0
       }
     },
     methods: {
