@@ -18,6 +18,10 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
+  def fetch_current_user
+    render json: current_user, status: :ok
+  end
+
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.

@@ -7,12 +7,16 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   strict: true,
   state: {
-    tweets: []
+    tweets: [],
+    user_id: '',
   },
   mutations: {
     set_tweets(state, tweets){
       state.tweets = tweets
-    }
+    },
+    set_user_id(state, user_id){
+      state.user_id = user_id
+    },
   },
   actions: {
     fetch_tweets(context){
