@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  include DeviseTokenAuth::Concerns::User
-
   has_many :tweets
 
   devise :database_authenticatable,
