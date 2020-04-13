@@ -63,4 +63,7 @@ RSpec.configure do |config|
 
   # 名前空間を省略できるようにする
   config.include FactoryBot::Syntax::Methods
+
+  # System Spec で `sign_in user` できるようにする
+  config.include Devise::Test::IntegrationHelpers, type: :system
 end
