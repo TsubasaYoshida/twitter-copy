@@ -3,8 +3,8 @@
     <div v-for="tweet in $store.state.tweets" class="tweet-item">
       <div class="tweet-item__body">{{ tweet.body }}</div>
       <div>
-        <div v-if="deletable(tweet)" @click="deleteTweet(tweet)" class="tweet-item__delete">削除</div>
-        <div v-else class="tweet-item__delete__disabled">削除</div>
+        <button v-if="deletable(tweet)" @click="deleteTweet(tweet)" class="tweet-item__delete">削除</button>
+        <button v-else class="tweet-item__delete__disabled">削除</button>
       </div>
     </div>
   </div>
@@ -63,21 +63,21 @@
   }
 
   .tweet-item__delete {
-    display: inline-block;
     cursor: pointer;
     color: #FFF;
     background-color: #fc5c65;
-    padding: 8px;
+    padding:  5px 8px;
     border-radius: 4px;
+    border: none;
   }
 
   .tweet-item__delete__disabled {
-    display: inline-block;
     cursor: not-allowed;
     color: #FFF;
     background-color: #333;
     opacity: .5;
-    padding: 8px;
+    padding: 5px 8px;
     border-radius: 4px;
+    border: none;
   }
 </style>
