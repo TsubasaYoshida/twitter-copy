@@ -6,5 +6,5 @@ test:
   encoding: utf8mb4
   username: root
   password: root
-  host: localhost
+  host: mysql
   database: db_github_actions
