@@ -10,13 +10,12 @@ jobs:
     services:
       mysql:
         image: mysql:5.7
-        options: --health-cmd "mysqladmin ping -h localhost" --health-interval 20s --health-timeout 10s --health-retries 10
 
     steps:
     - uses: actions/checkout@v1
 
     - name: Set up Ruby 2.7
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7.0
 
