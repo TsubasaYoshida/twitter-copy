@@ -1,9 +1,10 @@
 test:
   adapter: mysql2
   pool: 5
-  username: root
   charset: utf8mb4
   collation: utf8mb4_bin
   encoding: utf8mb4
+  username: root
   password: root
   host: localhost
+  database: db_github_actions
