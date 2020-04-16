@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
-gem 'mysql2', '>= 0.4.4'
+gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.3'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
@@ -33,10 +33,6 @@ group :development do
   gem 'html2haml'
   gem 'i18n_generators'
   gem 'letter_opener'
-end
-
-group :test do
-  gem 'pg'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
