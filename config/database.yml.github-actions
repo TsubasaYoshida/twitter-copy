@@ -1,8 +1,8 @@
 test:
-  adapter: mysql2
-  pool: 5
-  encoding: utf8mb4
-  username: root
-  password: root
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
   host: localhost
   database: db_github_actions
