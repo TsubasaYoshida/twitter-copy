@@ -44,6 +44,11 @@ jobs:
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: postgres
 
+    - name: webpack
+      run: |
+        bundle exec rails webpacker:install
+        bundle exec rails webpacker:compile
+
     - name: Run rspec
       run: COVERAGE=true bundle exec rspec  --require rails_helper
       env:
