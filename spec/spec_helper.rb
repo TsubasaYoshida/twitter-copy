@@ -95,6 +95,11 @@ RSpec.configure do |config|
 =end
 end
 
+ENV["RAILS_ENV"] ||= 'test'
+
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+
 Capybara.register_driver :selenium_chrome_headless do |app|
   browser_options = ::Selenium::WebDriver::Chrome::Options.new()
   browser_options.args << '--headless'
