@@ -49,6 +49,7 @@ jobs:
         npm install yarn
         yarn install
         bundle exec rails webpacker:install
+        bundle exec rake assets:precompile
         bundle exec rails webpacker:compile
       env:
         RAILS_ENV: test
