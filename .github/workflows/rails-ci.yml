@@ -50,6 +50,10 @@ jobs:
         yarn install
         bundle exec rails webpacker:install
         bundle exec rails webpacker:compile
+      env:
+        RAILS_ENV: test
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
 
     - name: Run rspec
       run: COVERAGE=true bundle exec rspec  --require rails_helper
