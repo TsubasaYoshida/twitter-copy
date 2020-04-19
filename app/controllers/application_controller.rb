@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-
   helper_method :minimum_layout?, :minimum_layout!
 
   def after_sign_in_path_for(resource)

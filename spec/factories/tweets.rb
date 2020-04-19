@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :tweet do
-    user { nil }
-    body { "MyText" }
+    association :user, factory: :user
+    body {'エアロビクスしようぜ。'}
   end
 end
