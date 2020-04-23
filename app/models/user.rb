@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   has_many :tweets
+  has_many :following_relations, class_name: 'Follow', foreign_key: 'following_id', dependent: :destroy
+  has_many :followed_relations, class_name: 'Follow', foreign_key: 'followed_id', dependent: :destroy
+  has_many :follows, through: :following_relations, source: :followed
+  has_many :followers, through: :followed_relations, source: :following
 
   devise :database_authenticatable,
          # deviseのバリデーションの仕組みがわからないので、自前で作る
