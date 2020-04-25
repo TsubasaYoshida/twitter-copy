@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'tweets', type: :system do
   before do
-    user = create(:user)
+    user = create(:user_1)
     user.confirm
     sign_in user
 
