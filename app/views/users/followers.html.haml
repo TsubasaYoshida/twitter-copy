@@ -1,0 +1,10 @@
+= render 'profile'
+
+.follower
+  .follower__header
+    フォロワー
+
+.follower__card-wrapper
+  - @user.followers.each do |follower|
+    .follower__card
+      = follower.name

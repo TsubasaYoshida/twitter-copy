@@ -1,27 +1,4 @@
-.profile
-  .profile__name
-    = @user.name
-  .profile__screen-name
-    = "@#{@user.screen_name}"
-
-  = follow_button(@user)
-
-.user-data-list
-  .user-data-list__item
-    .user-data-list__item-label
-      ツイート
-    .user-data-list__item-value
-      = @user.tweets.count
-  .user-data-list__item
-    .user-data-list__item-label
-      フォロー
-    .user-data-list__item-value
-      = @user.follows.count
-  .user-data-list__item
-    .user-data-list__item-label
-      フォロワー
-    .user-data-list__item-value
-      = @user.followers.count
+= render 'profile'
 
 .tweet-list
   .tweet-list__header
@@ -29,12 +6,3 @@
   - @user.tweets.each do |tweet|
     .tweet-list__item
       = tweet.body
-
-.follower
-  .follower__header
-    フォロワー
-
-.follower__card-wrapper
-  - @user.followers.each do |follower|
-    .follower__card
-      = follower.name
