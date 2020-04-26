@@ -22,11 +22,15 @@ body {
   font-family: -apple-system, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif;
   font-size: 1.4rem;
   color: #333;
-  background-color: #f6f6f4;
+  background-color: #dfe4ea;
 }
 
 a {
   color: #333;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 input[aria-invalid="true"] {

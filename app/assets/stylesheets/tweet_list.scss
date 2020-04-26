@@ -1,0 +1,21 @@
+.tweet-list {
+  margin-bottom: 16px;
+
+  &__header {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #FFF;
+    padding: 12px;
+    border: solid 4px #666;
+  }
+
+  &__item {
+    background-color: #FFF;
+    padding: 24px;
+    border: solid 4px #666;
+  }
+
+  &__item:not(:first-child) {
+    border-top: none;
+  }
+}

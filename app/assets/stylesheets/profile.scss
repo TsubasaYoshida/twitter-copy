@@ -1,0 +1,18 @@
+.profile {
+  padding: 16px;
+  margin: 24px auto 16px;
+  background-color: #FFF;
+  border: 4px #666 solid;
+  box-sizing: border-box;
+
+  &__name {
+    margin-bottom: 4px;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  &__screen-name {
+    margin-bottom: 16px;
+    color: #666;
+  }
+}

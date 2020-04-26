@@ -3,6 +3,14 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'sign_up_done', to: 'home#sign_up_done'
 
+  get ':screen_name', to: 'users#show', as: :user
+  scope ':screen_name' do
+    get 'following', to: 'users#following'
+    get 'followers', to: 'users#followers'
+    post 'follow', to: 'follows#create'
+    delete 'follow', to: 'follows#destroy'
+  end
+
   # ルーティングをカスタマイズする場合は、まず skip でルーティング生成をスキップする
   devise_for :users, skip: [:sessions, :registrations], controllers: {
       registrations: 'users/registrations',

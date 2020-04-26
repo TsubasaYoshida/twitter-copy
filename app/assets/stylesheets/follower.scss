@@ -1,0 +1,25 @@
+.follower {
+  margin-bottom: 4px;
+
+  &__header {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #FFF;
+    padding: 12px;
+    border: solid 4px #666;
+  }
+
+  &__card-wrapper {
+    display: grid;
+    gap: 4px;
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  &__card {
+    background-color: #FFF;
+    padding: 24px;
+    border: solid 4px #666;
+  }
+}
