@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="button" type="button" name="button" @click="show">
+    <button class="hamburger-button" type="button" name="button" @click="show">
       <span class="top"></span>
       <span class="middle"></span>
       <span class="bottom"></span>
@@ -35,7 +35,7 @@
         let className = elm.className
         if (className.indexOf('is-open') !== -1) {
           this.gnav = false
-          elm.className = 'button'
+          elm.className = 'hamburger-button'
         } else {
           this.gnav = true
           elm.className += " is-open"
@@ -46,7 +46,7 @@
 </script>
 
 <style>
-  .button {
+  .hamburger-button {
     display: block;
     width: 50px;
     height: 50px;
@@ -59,19 +59,19 @@
     outline: none;
   }
 
-  .button.is-open .top {
+  .hamburger-button.is-open .top {
     transform: rotate(45deg);
   }
 
-  .button.is-open .middle {
+  .hamburger-button.is-open .middle {
     opacity: 0;
   }
 
-  .button.is-open .bottom {
+  .hamburger-button.is-open .bottom {
     transform: rotate(-45deg);
   }
 
-  .button span {
+  .hamburger-button span {
     display: block;
     width: 20px;
     height: 1px;
@@ -85,11 +85,11 @@
     transition: 0.5s ease;
   }
 
-  .button span.top {
+  .hamburger-button span.top {
     transform: translateY(-6px);
   }
 
-  .button span.bottom {
+  .hamburger-button span.bottom {
     transform: translateY(6px);
   }
 
