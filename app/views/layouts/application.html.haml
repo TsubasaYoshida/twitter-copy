@@ -22,8 +22,6 @@
         #app
           %hamburger
 
-        .sign-out
-          = link_to 'ログアウト', destroy_user_session_path, method: :delete
         - if notice
           .notice
             = notice

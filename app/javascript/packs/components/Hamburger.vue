@@ -9,12 +9,9 @@
       <nav id="gnav" class="nav" v-if="gnav">
         <div class="nav__body">
           <ul class="nav__lst">
-            <li class="nav__item"><a>Works</a></li>
-            <li class="nav__item"><a>Blog</a></li>
-            <li class="nav__item"><a>People</a></li>
-            <li class="nav__item"><a>Recruit</a></li>
-            <li class="nav__item"><a>Company</a></li>
-            <li class="nav__item"><a>Contact</a></li>
+            <li class="nav__item"><a>タイムライン</a></li>
+            <li class="nav__item"><a>プロフィール</a></li>
+            <li class="nav__item"><a rel="nofollow" data-method="delete" href="/sign_out">ログアウト</a></li>
           </ul>
         </div>
       </nav>
@@ -117,7 +114,7 @@
   }
 
   .nav__body {
-    padding: 40px;
+    margin: 48px 0 0 40px;
   }
 
   .nav__lst {
@@ -125,13 +122,12 @@
   }
 
   .nav__item {
-    font-size: 24px;
-    line-height: 1.5;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: bold;
   }
 
   .nav__item ~ .nav__item {
-    margin-top: 8px;
+    margin-top: 16px;
   }
 
   .nav__item a {
