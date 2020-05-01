@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @tweets = Tweet.timeline_tweets(current_user)
   end
 
   def sign_up_done

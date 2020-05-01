@@ -1,2 +1,6 @@
-.home
-  %h1.home__title トップページ
+- @tweets.each do |tweet|
+  .tweet-list__item
+    = tweet.user.name
+    = tweet.user.screen_name
+    = tweet.body
+    = tweet.created_at
