@@ -11,7 +11,19 @@ RSpec.describe Tweet, type: :model do
 
   it "bodyがなければ無効な状態であること" do
     @tweet.body = ''
-    expect(@tweet.valid?).to be_falsey
+    @tweet.valid?
+    expect(@tweet.errors.of_kind?(:body, :blank)).to be_truthy
+  end
+
+  it "bodyが140文字であれば有効な状態であること" do
+    @tweet.body = 'a' * 140
+    expect(@tweet.valid?).to be_truthy
+  end
+
+  it "bodyが141文字であれば無効な状態であること" do
+    @tweet.body = 'a' * 141
+    @tweet.valid?
+    expect(@tweet.errors.of_kind?(:body, :too_long)).to be_truthy
   end
 
   it "フォローしている人と自分自身が投稿したツイートを取得できること" do
