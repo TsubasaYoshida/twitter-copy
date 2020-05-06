@@ -1,6 +1,12 @@
-- @tweets.each do |tweet|
-  .tweet-list__item
-    = tweet.user.name
-    = tweet.user.screen_name
-    = tweet.body
-    = tweet.created_at
+%ul.tweet-list
+  - @tweets.each do |tweet|
+    %li.tweet-list__item
+      %span.tweet-list__user-name
+        = tweet.user.name
+      %span.tweet-list__user-screen-name
+        @#{tweet.user.screen_name}
+      %time.tweet-list__datetime{datetime: "#{l tweet.created_at, format: :long}"}
+        = l tweet.created_at, format: :long
+      .tweet-list__body
+        = tweet.body
+
