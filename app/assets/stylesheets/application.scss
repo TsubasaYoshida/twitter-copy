@@ -100,3 +100,9 @@ textarea[aria-invalid="true"] {
     color: #FFF;
   }
 }
+
+.hamburger {
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+}

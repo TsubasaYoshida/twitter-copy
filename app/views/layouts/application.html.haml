@@ -19,8 +19,17 @@
       - if minimum_layout?
         = yield
       - else
-        #app
+        #app.hamburger
           %hamburger
+
+        %nav.navigation
+          %ul.navigation__inner
+            %li.navigation__item
+              = link_to 'タイムライン', :root, class: :navigation__link
+            %li.navigation__item
+              = link_to 'プロフィール', user_path(current_user.screen_name), class: :navigation__link
+            %li.navigation__item
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :navigation__link
 
         - if notice
           .notice
