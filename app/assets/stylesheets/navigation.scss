@@ -1,11 +1,8 @@
 .navigation {
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-  margin: 16px 0;
+  margin-top: 20px;
+  margin-left: auto;
   &__inner {
     display: flex;
-    justify-content: flex-end;
   }
   &__item {
     border: solid 4px #666;
