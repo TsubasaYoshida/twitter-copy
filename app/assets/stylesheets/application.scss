@@ -33,6 +33,10 @@ a {
   }
 }
 
+ul {
+  list-style: none;
+}
+
 input[aria-invalid="true"] {
   border-color: #dc3545;
 }
@@ -94,5 +98,11 @@ textarea[aria-invalid="true"] {
   &:hover {
     background-color: #666;
     color: #FFF;
+  }
+}
+
+.hamburger {
+  @media screen and (min-width: 769px) {
+    display: none;
   }
 }

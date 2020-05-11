@@ -1,0 +1,24 @@
+.navigation {
+  margin-left: auto;
+  margin-top: auto;
+  &__inner {
+    display: flex;
+  }
+  &__item {
+    border: solid 4px #666;
+    background-color: #FFF;
+  }
+  &__item:not(:first-child) {
+    border-left: none;
+  }
+  &__link {
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  &__link:hover {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #666;
+    font-weight: bold;
+  }
+}

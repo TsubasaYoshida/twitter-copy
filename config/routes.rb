@@ -29,5 +29,5 @@ Rails.application.routes.draw do
     post 'sign_up', to: 'users/registrations#create', as: :user_registration
   end
 
-  root to: 'tweets#index'
+  root to: 'home#index'
 end
