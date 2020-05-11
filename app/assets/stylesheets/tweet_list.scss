@@ -23,9 +23,19 @@
     font-weight: bold;
   }
 
+  &__user-name:hover {
+    color: #ff793f;
+    text-decoration: none;
+  }
+
   &__user-screen-name {
     font-size: .875rem;
     margin-left: 4px;
+  }
+
+  &__user-screen-name:hover {
+    color: #ff793f;
+    text-decoration: none;
   }
 
   &__datetime {

@@ -1,10 +1,8 @@
 %ul.tweet-list
   - @tweets.each do |tweet|
     %li.tweet-list__item
-      %span.tweet-list__user-name
-        = tweet.user.name
-      %span.tweet-list__user-screen-name
-        @#{tweet.user.screen_name}
+      = link_to tweet.user.name, user_path(tweet.user.screen_name), class: 'tweet-list__user-name'
+      = link_to "@#{tweet.user.screen_name}", user_path(tweet.user.screen_name), class: 'tweet-list__user-screen-name'
       %time.tweet-list__datetime{datetime: "#{l tweet.created_at, format: :long}"}
         = l tweet.created_at, format: :long
       .tweet-list__body
